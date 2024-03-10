@@ -1,0 +1,84 @@
+.containerImageVote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 250px;
+    z-index: 1;
+    
+    & .imageVote {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 85%;
+        user-select: none;
+        position: relative;
+        
+        & span {
+            position: absolute;
+            top: -80px;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+
+            & h1 {
+                font-size: 36px;
+                color: rgb(0, 0, 0);
+                text-shadow: 3px 2px 2px rgb(255, 255, 255);
+            }
+            & .imgLeft {
+                position: relative;
+                bottom: 30px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            & .imgRight {
+                position: relative;
+                bottom: 30px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+
+        & .or {
+            color: white;
+            font-size: 52px;
+            text-shadow: 2px 3px 2px black;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+        
+        & .conImg {
+            width: 720px;
+            height: 520px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 2px 10px black;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+
+            & img {
+                max-width: 720px;
+                max-height: 510px;
+                border-radius: 10px;
+            }
+        }
+        & .conImg:hover {
+            transform: scale(1.1);
+        } 
+        & .conImg:active {
+            filter: brightness(90%);
+        } 
+    }
+}
+.containerImageVote.none{
+    display: none;
+}

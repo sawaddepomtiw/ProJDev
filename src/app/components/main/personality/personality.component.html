@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="body">
+        <div class="proFile"><h1 style="color: red;">เหลือทำเปลี่ยนรูป profile</h1>
+            <img [src]="this.profileShow" alt="">
+            <div class="button">
+                <button>Change picture</button>
+            </div>
+        </div>
+        <div class="proFileDetail">
+            <div class="head">
+                <h1 [routerLink]="['/main']"><i class='bx bx-chevron-left' ></i>Back to vote</h1>
+                <h2>Personality</h2>
+            </div>
+        <hr class="hr">
+            <h1>Email:<p>{{ this.emailShow }}</p></h1>
+        <hr>
+            <h1>Name:<p>{{ this.nameShow }}</p></h1>
+        <hr>
+            <h1>Password:
+                <input #passwordInput type="password" readonly [value]="this.passwordShow" id="password">
+                <i #eyeIcon class="ri-eye-off-line eye" id="eye" ></i>
+                <i class='bx bx-edit-alt' (click)="changepassword()"></i>
+            </h1>
+        </div>
+    </div>
+</div>

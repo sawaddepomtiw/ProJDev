@@ -1,0 +1,36 @@
+<app-header></app-header>
+
+<div class="containerImageVote" id="containerImageVote">
+    <div class="imageVote">
+        <span>
+            <img class="imgLeft" [src]="this.showImageUserVoteLeft" alt="">
+            <h1>Choose your favorite picture and vote for it.</h1>
+            <img class="imgRight" [src]="this.showImageUserVoteRight" alt="">
+        </span>
+        <!-- picture 1 -->
+        <div class="conImg" (click)="handleImageClick(1)">
+            <img [src]="this.randomImageLeftShow?.url" [alt]="" >
+        </div>
+        <h1 class="or">Or</h1>
+        <!-- picture 2 -->
+        <div class="conImg" (click)="handleImageClick(2)">
+            <img [src]="this.randomImageRightShow?.url" [alt]="">
+        </div>
+    </div>
+</div>
+
+
+  
+<!-- <h2 style="
+      color: rgb(255, 255, 255); 
+      font-weight: 400;
+      "
+      >สิ่งที่ต้องทำเพิ่มหรือพิจารณา.... #ที่คิดออก ณ บัดนาว <br>
+      1. เช็ค email, password ด้วยว่าตรงกันใน LocalStorage ก่อนหรือไม่ในกรณีคลิ๊ก Remember me เพื่อไม่ต้องเก็บซ้ำ<br>
+      2. logo ตรง select email <br>
+      3. ตรง register ตอนสมัครเสร็จสิ้น ให้จะไปกรอก login เข้าระบบเลยหรือไม่ หรือเข้าระบบไปเลย <br>
+      4. ดักเมื่อ login แล้วกดย้อนไม่ได้ นอกจากกด logout <br>
+      5. / เข้าไม่ได้ ต้องผ่าน login เข้าระบบก่อนทุกครั้ง
+</h2> -->
+
+  

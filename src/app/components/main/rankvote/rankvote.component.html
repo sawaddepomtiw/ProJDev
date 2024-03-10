@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<div class="container con">
+    <div class="body bo">
+        <div class="bodyTop botop">
+            <div class="win">
+                <div class="winner">
+                    <img [src]="this.imageLeft.url" alt="">
+                </div>
+                <h1>Winner!</h1>
+                <h1>{{this.imageLeft.score}}</h1>
+            </div>
+            <div class="lose">
+                <div class="loser">
+                    <img [src]="this.imageRight.url" alt="">
+                </div>
+                <h1>Lose</h1>
+                <h1>{{this.imageRight.score}}</h1>
+            </div>
+        </div>
+        <div class="bodyDetailRank">
+            <div class="table">
+                <div class="detailTop">
+                    <span></span>
+                    <span class="name"><h1>Name</h1></span>
+                    <span class="score"><h1>Score</h1></span>
+                    <span class="rank"><h1>Rank</h1></span>
+                </div>
+            </div>
+            <div class="table">
+                <div class="detailShow">
+                    <span class="image"><img src="" alt=""></span>
+                    <span class="name"><h1>name</h1></span>
+                    <span class="score"><h1>score</h1></span>
+                    <span class="rank"><h1>rank</h1></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

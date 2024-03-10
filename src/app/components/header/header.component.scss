@@ -1,0 +1,224 @@
+.container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+
+    & .navHeadBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 85%;
+        padding: 10px;
+
+        & .logo {
+
+            & h1 {
+                font-size: 48px;
+                color: white;
+                cursor: pointer;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: black;
+                text-shadow: 4px 2px 2px black;
+                transition: all 0.2s ease;
+                user-select: none;
+            }
+            & h1:hover {
+                color: rgba(255, 255, 255, 0.7);
+            }
+            & h1:active {
+                transform: scale(1.02);
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        & .rightHead {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            width: 400px;
+            padding: 10px;
+
+            & .proFile {
+
+                & img {
+                    width: 60px;
+                    height: 60px;
+                    user-select: none;
+                }
+            }
+
+            & .name {
+
+                & h1 {
+                    font-size: 26px;
+                    color: white;
+                    text-shadow: 3px 2px 2px black;
+                    cursor: default;
+                }
+            }
+
+            // hamburger
+            & .visuallyHidden {
+                position: absolute; 
+                overflow: hidden; 
+                clip: rect(0 0 0 0); 
+                height: 1px; 
+                width: 1px; 
+                margin: -1px; 
+                padding: 0; 
+                border: 0; 
+                z-index: 100;
+            } 
+
+            & .hamburger {
+                margin: 0 auto;
+                width: 30px;
+                height: 30px;
+                position: relative;
+                z-index: 100;
+            }
+            
+            & .hamburger .bar {
+                padding: 0;
+                width: 30px;
+                height: 4px;
+                background-color: rgb(255, 255, 255);
+                display: block;
+                border-radius: 4px;
+                transition: all 0.3s ease-in-out;
+                position: absolute; 
+                z-index: 100;
+            }
+            
+            & .bar1 {
+                top: 0;
+            }
+            
+            & .bar2,
+                .bar3 {
+                top: 13.5px;
+            }
+            
+            & .bar3 {
+                right: 0;
+            }
+            
+            & .bar4 {
+                bottom: 0;
+            }
+
+            & label {
+                cursor: pointer;
+                z-index: 100;
+            }
+
+            & .hamburger4 .bar4 {
+                top: 13.5px;
+            }
+
+            & .hamburger4 .bar5 {
+                bottom: 0px;
+            }
+
+            & .hamburger4 .bar {
+                transition: all 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+            }
+
+            & .hamburger4 .bar2 {
+                width: 1px;
+                transform: rotate(90deg);
+                left: 13.5px;
+            }
+
+            & .hamburger4 .bar3 {
+                width: 1px;
+                left: 13.5px;
+                
+            }
+
+            & .checkbox4:checked + label > .hamburger4 > .bar1{
+                top: 13.5px;
+                background-color: transparent;
+            }
+
+            & .checkbox4:checked + label > .hamburger4 > .bar2{
+                left: 0px;
+                width: 30px;
+                transform: rotate(45deg);
+            }
+
+            & .checkbox4:checked + label > .hamburger4 > .bar3{
+                left: 0;
+                width: 30px;
+                transform: rotate(-45deg);
+            }
+
+            & .checkbox4:checked + label > .hamburger4 > .bar4{
+                background-color: transparent;
+            }
+
+            & .checkbox4:checked + label > .hamburger4 > .bar5{
+                bottom: 13.5px;
+                background-color: transparent; 
+            }
+            // hamburger 
+
+            & .containerSelect {
+                background-color: #808080;
+                position: absolute;
+                text-align: center;
+                top: 95px;
+                left: 0;
+                width: 100%;
+                padding: 8px 0;
+                border-radius: 10px;
+                display: none;
+                
+                & .select {
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+                    background-color: #8f8f8f;
+
+                    & h1 {
+                        padding: 16px 10px;
+                        font-size: 24px;
+                        font-weight: 600;
+                        color: white;
+                        text-shadow: 2px 2px 2px black;
+                        user-select: none;
+                        position: relative;
+
+                        & .bx-user,
+                            .bx-lock-open,
+                            .bx-image-alt,
+                            .bx-log-out,
+                            .bx-bar-chart-alt-2 {
+                            position: absolute;
+                            left: 40px;
+                            top: 20px;
+                            font-size: 24px;
+                            color: rgb(255, 255, 255);
+                            pointer-events: none;
+                        }
+                    }
+                    & h1:hover {
+                        color: rgba(255, 255, 255, 0.7);
+                        background-color: rgba(0, 0, 0, 0.2);
+                    }
+                    & h1:active {   
+                        color: rgba(255, 255, 255, 0.5);
+                        background-color: rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+            & .containerSelect.show {
+                display: block;
+            }
+        }
+    }
+}

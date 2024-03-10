@@ -1,0 +1,94 @@
+<div class="containerhead">
+  <div class="navHeadBar">
+      <div class="logo">
+          <h1 [routerLink]="['/main']">Dinomash</h1>
+      </div>
+      <div class="rightHead" id="rightHead">
+          <span class="proFile">
+              <img [src]="this.profileShow" alt="">
+          </span>
+          <span class="name">
+              <h1>{{ this.nameShow }}</h1>
+          </span>
+          <input type="checkbox" id="checkbox4" class="checkbox4 visuallyHidden">
+          <label for="checkbox4" id="selectShow" (click)="selectShow()">
+              <div class="hamburger hamburger4">
+                  <span class="bar bar1"></span>
+                  <span class="bar bar2"></span>
+                  <span class="bar bar3"></span>
+                  <span class="bar bar4"></span>
+                  <span class="bar bar5"></span>
+              </div>
+          </label>            
+          <div class="containerSelect" id="containerSelect">
+              <div class="select" id="select" (click)="selectClick($event)">
+                  <h1><i class='bx bx-user'></i>Personality</h1>
+                  <h1><i class='bx bx-lock-open'></i>Change password</h1>
+                  <h1><i class='bx bx-image-alt'></i>Your picture</h1>
+              <hr>
+                  <h1><i class='bx bx-bar-chart-alt-2'></i>Ranks</h1>
+              <hr>
+                  <h1><i class='bx bx-log-out'></i>Log out</h1>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<div class="containers">
+    <div class="bodys">
+        <div class="showImageUser">
+            <div class="showhead" >
+                <h1 [routerLink]="['/main']" class="back"><i class='bx bx-chevron-left'></i>Back to vote</h1>
+                <h1 class="YourImage">Your image</h1>
+            </div>
+            <div class="table">
+                <div class="Head">
+                  <span></span>
+                  <span><h1>Name</h1></span>
+                  <span><h1>Score</h1></span>
+                  <span><h1>Rank</h1></span>
+                  <span><h1>Rating</h1></span>
+                </div>
+            </div>
+            <div class="table" *ngFor="let results of this.allShow">
+                <div class="trHead" >
+                    <span class="image"><img [src]="results.url" alt=""></span>
+                    <span class="spanName"><h1 class="name">{{ results.name }}</h1></span>
+                    <span class="spanScore"><h1 class="score">{{ results.score }}</h1></span>
+                    <span class="spanRank"><h1 class="rank">{{ results.score }}</h1></span>
+                    <span class="spanRating"><h1 class="rating">{{ results.score }}</h1></span>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <!-- <button (click)="openDialog('0ms', '0ms')">Upload your picture</button> -->
+            <button type="button" data-bs-toggle="modal" data-bs-target="#showModal">Upload your picture</button>
+        </div>
+        <div class="graph">
+            <button>Show graph</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" placeholder="Enter text" [(ngModel)]="textInput" name="textInput">
+        <input type="file" (change)="onFileSelected($event)">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="onOkClicked()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

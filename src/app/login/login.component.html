@@ -1,0 +1,53 @@
+<div class="login">
+   <div class="login__form loginN">
+      <h1 class="h1">Sign in</h1>
+
+      <div class="login__content">
+         <div class="login__box">
+            <i class="bx bxl-gmail login__icon"></i>
+
+            <div class="login__box-input"> <!-- กรอก Email -->
+                                 <!-- แสดงการบันทึก email -->
+               <input #email value="{{ sendSelectEmail }}" [(ngModel)]="tempEmailLogins" type="email" class="login__input" id="login-email" placeholder=" "> 
+               <label for="login-email" class="login__label">Email</label>
+               <i class="bx bxs-chevron-down login__eye" id="login__select"></i>
+            </div>
+         </div>
+         <div class="container__selectEmail emailSelect" id="show-mail">
+            <div (click)="clickSelect(select)" class="Show__emailSelect" id="emailSelect" *ngFor="let select of select">
+               <img src="https://img.freepik.com/free-vector/cute-kid-wearing-kangaroo-costume-cartoon-vector-icon-illustration-people-animal-icon-isolated-flat_138676-7494.jpg?size=338&ext=jpg&ga=GA1.1.1448711260.1706918400&semt=sph" alt="Logo">
+               <h1>
+                  {{ select.email }} <br>
+                  <input type="password" readonly value="{{ select.password }}">
+               </h1>
+            </div>
+         </div>
+
+         <div class="login__box">
+            <i class="ri-lock-2-line login__icon"></i>
+
+            <div class="login__box-input"> <!-- กรอก Password -->
+               <input (keydown.enter)="addUserLoginSession(email, password)" (keydown.enter)="Login(email, password)" (keydown.enter)="addTempsLocalStorage(email, password, remember)" #password value="{{ sendSelectPassword }}" [(ngModel)]="tempPasswordLogins" type="password" class="login__input" id="login-password" placeholder=" ">
+               <label for="login-password" class="login__label">Password</label>
+               <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+            </div>
+         </div>
+      </div>
+
+      <div class="login__check">
+         <div class="login__check-group">
+            <input #remember [checked]="checked" type="checkbox" class="login__check-input" id="login-check">
+            <label for="login-check" class="login__check-label">Remember me</label>
+         </div>
+
+         <!-- <a href="#" class="login__forgot">Forgot Password?</a> -->
+      </div>
+      <!-- ส่ง OTP -->
+      <button (click)="addUserLoginSession(email, password)" (click)="Login(email, password)" (click)="addTempsLocalStorage(email, password, remember)" type="submit" class="login__button">Signin</button>
+
+      <h1 class="login__register">
+         Don't have an account? <a class="registers" (click)="toggleRegisterForm()">Register</a>
+      </h1>
+   </div>
+</div>
+<router-outlet></router-outlet>

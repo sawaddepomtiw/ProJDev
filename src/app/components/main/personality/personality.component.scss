@@ -1,0 +1,151 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    & .body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        width: 70%;
+
+        & .proFile {
+            user-select: none;
+            
+            & img {
+                max-width: 512px;
+                max-height: 512px;
+            }
+            & .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px 0 0 0;
+
+                & button {
+                    padding: 10px;
+                    font-size: 28px;
+                    font-weight: 500;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    background: rgb(59, 56, 56);
+                    color: white;
+                    transition: all 0.2s ease;
+                    box-shadow: 3px 3px 2px rgb(255, 255, 255);
+                }
+                & button:hover {
+                    background: rgb(71, 67, 67);
+                }
+                & button:active {
+                    background: rgb(47, 44, 44);
+                }
+            }
+        }
+
+        & .proFileDetail {
+            position: relative;
+            width: 500px;
+
+            & .head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                & h1 {
+                    color: rgb(0, 0, 0);
+                    font-weight: 500;
+                    font-size: 28px;
+                    text-shadow: 1px 1px 0px rgb(255, 255, 255);
+                    display: flex;
+                    user-select: none;
+                    align-items: center;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+    
+                    & .bx-chevron-left {
+                        font-size: 38px;
+                    }
+                }
+                & h1:hover {
+                    transform: scale(1.02);
+                    color: rgba(0, 0, 0, 0.8);
+                }
+                & h1:active {
+                    color: rgba(0, 0, 0, 0.9);
+                }
+                
+                & h2 {
+                    font-size: 30px;
+                    font-weight: 500;
+                    margin: 0 6px 0 0;
+                    color: rgba(0, 0, 0);
+                    user-select: none;
+                    text-shadow: 1px 1px 0px rgb(255, 255, 255);
+                }
+            }
+            
+            & h1 {
+                color: rgb(0, 0, 0);
+                font-weight: 500;
+                font-size: 28px;
+                text-shadow: 2px 2px 2px rgb(255, 255, 255);
+                display: flex;
+                user-select: none;
+                align-items: center;
+                
+                & p {
+                    position: relative;
+                    left: 10px;
+                    top: 2px;
+                    user-select: text;
+                    font-size: 24px;
+                    text-shadow: none;
+                    color: white;
+                    text-shadow: 2px 3px 2px rgb(0, 0, 0);
+                }
+                & input {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    position: relative;
+                    top: 2px;
+                    left: 10px;
+                    max-width: 250px;
+                    font-size: 22px;
+                    color: white;
+                    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+                    pointer-events: none;
+                    user-select: none;
+                }
+                & input.show {
+                    font-size: 22px;
+                    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+                    color: white;
+                    pointer-events: auto;
+                }
+                & .eye {
+                    position: absolute;
+                    right: 45px;
+                    padding: 6px;
+                    cursor: pointer;
+                    color: rgb(0, 0, 0);
+                }
+                & .bx-edit-alt {
+                    position: absolute;
+                    right: 0;
+                    padding: 6px;
+                    cursor: pointer;
+                }
+            }
+            & hr {
+                margin: 30px 0;
+            }
+            & .hr {
+                margin: 12px 0 30px 0;
+                border: 1px solid rgb(0, 0, 0);
+            }
+        }
+    }
+}
